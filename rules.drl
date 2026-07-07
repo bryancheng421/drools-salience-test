@@ -1,0 +1,19 @@
+package rules
+
+global java.util.List firedOrder;
+
+rule "Rule A"
+    salience 0
+    when
+        String(this == "go")
+    then
+        firedOrder.add("A");
+end
+
+rule "Rule B"
+    salience 0
+    when
+        String(this == "go")
+    then
+        firedOrder.add("B");
+end
